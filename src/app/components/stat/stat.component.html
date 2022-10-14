@@ -1,0 +1,46 @@
+<ion-content [scrollEvents]="true">
+  <ion-img src="https://media.nature.com/lw800/magazine-assets/d41586-019-00898-0/d41586-019-00898-0_16562856.jpg"></ion-img>
+  <div class="stats">
+    <h2 class="ion-padding-start">Statistiques</h2>
+    <ion-grid>
+      <ion-row class="ion-align-items-center">
+        <ion-col class="ion-text-start">
+          <div class="stats_card">{{ nbGames }} <span class="stats_card_text">Parties</span></div>
+        </ion-col>
+        <ion-col class="ion-text-start">
+          <div class="stats_card">{{ wonGamesEnPourcent }} <span class="stats_card_text">% Gagnées</span></div>
+        </ion-col>
+      </ion-row>
+      <ion-row class="ion-align-items-center">
+        <ion-col class="ion-text-start">
+          <div class="stats_card">{{ averageTentatives }} <span class="stats_card_text">Tentatives moy</span></div>
+        </ion-col>
+        <ion-col class="ion-text-start">
+          <div class="stats_card">{{ topSerie }} <span class="stats_card_text">Top séries</span></div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+  <div class="performances">
+    <ion-accordion-group>
+      <ion-accordion *ngIf="words; else elseBlock">
+          <ion-item slot="header" color="dark">
+            <ion-label>Liste des mots trouvés</ion-label>
+          </ion-item>
+          <ion-list slot="content">
+            <ion-item color="dark" *ngFor="let word of words">
+              <ion-label>{{ word }}</ion-label>
+            </ion-item>
+          </ion-list>
+      </ion-accordion>
+    </ion-accordion-group>
+    <ng-template #elseBlock>Aucun mot n'a été trouvé pour l'instant !</ng-template>
+  </div>
+</ion-content>
+<ion-footer class="ion-text-center">
+  <ion-toolbar>
+    <ion-button (click)="onDismiss()" fill="clear" color="success">
+      <ion-icon slot="start" name="close"></ion-icon>
+    </ion-button>
+  </ion-toolbar>
+</ion-footer>

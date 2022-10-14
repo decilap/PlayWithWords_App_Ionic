@@ -1,0 +1,20 @@
+.keys{
+  padding: 0 10px;
+  .bottom{
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    .midle-button{
+      width: 60%;
+    }
+    .enter,.delete{
+      width: 73px;
+      border: 1px solid #c4c4c4;
+      box-shadow: 0px 5px 0px 0px rgb(66 68 65), 0px 5px 12px 0px rgb(0 0 0 / 60%), inset 0px 0px 10px -5px rgb(0 0 0);
+      /* border-radius: 5px; */
+      height: 41px;
+      /* flex: 1; */
+      padding: 1px;
+    }
+  }
+}

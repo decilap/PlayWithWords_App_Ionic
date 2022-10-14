@@ -1,0 +1,46 @@
+<ion-content [scrollEvents]="true">
+  <div class="help-content">
+    <h2>Comment jouer ?</h2>
+    <p data-v-28f783ff="">Ce jeu reprend exactement le même concept que le
+    <em>Wordle</em>, mais en français.</p>
+    <p>A chaque partie, un mot de 5 lettres est choisi aléatoirement. Vous devez le deviner en 5
+      essais.</p>
+    <p>À chaque essai, les lettres du mot que vous avez proposé changeront de couleur en fonction de
+      à quel point vous êtes proche de le trouver.</p>
+    <div class="help-exemple">
+      <div class="help-word">
+        <div class="help-letter-container correct color-blind"> F</div>
+        <div class="help-letter-container"> R</div>
+        <div class="help-letter-container"> U</div>
+        <div class="help-letter-container"> I</div>
+        <div class="help-letter-container"> T</div>
+      </div>
+      <p>La lettre <span class="correct color-blind">F</span> est dans le mot, à
+        la bonne place.</p>
+      <div class="help-word">
+        <div class="help-letter-container"> P</div>
+        <div class="help-letter-container"> O</div>
+        <div class="help-letter-container partial color-blind"> C</div>
+        <div class="help-letter-container"> H</div>
+        <div class="help-letter-container"> E</div>
+      </div>
+      <p>La lettre <span data-v-28f783ff="" class="partial color-blind">C</span> est dans le mot,
+        mais pas à la bonne place.</p>
+      <div class="help-word">
+        <div class="help-letter-container"> S</div>
+        <div class="help-letter-container"> O</div>
+        <div class="help-letter-container"> E</div>
+        <div class="help-letter-container"> U</div>
+        <div class="help-letter-container incorrect color-blind"> R</div>
+      </div>
+      <p>La lettre <span data-v-28f783ff="">R</span> n'est pas dans le mot.</p></div>
+  </div>
+</ion-content>
+
+<ion-footer class="ion-text-center">
+  <ion-toolbar>
+    <ion-button (click)="onDismiss()" fill="clear" color="success">
+      <ion-icon slot="start" name="close"></ion-icon>
+    </ion-button>
+  </ion-toolbar>
+</ion-footer>

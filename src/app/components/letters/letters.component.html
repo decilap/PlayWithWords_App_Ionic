@@ -1,0 +1,11 @@
+<ion-grid>
+  <ion-row *ngFor="let row of rows;let indexRow=index" class="ion-justify-content-center">
+    <ion-col size-md *ngFor="let col of row;let indexCol= index">
+      <div class="screen {{col.class}}" [ngClass]="{'flip': col.active == true,
+       'active': currentCol == indexCol && currentRow == indexRow,
+       'bubble-6': colCount == 6, 'bubble-7': colCount == 7, 'bubble-8': colCount == 8}">
+       <span class="shadow"> {{col.active == true ? col.letter : ""}}</span></div>
+    </ion-col>
+  </ion-row>
+  <ion-icon name="help-outline" class="help" (click)="indice($event)"></ion-icon>
+</ion-grid>

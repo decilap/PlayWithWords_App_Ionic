@@ -1,0 +1,58 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar fixed>
+    <ion-title>Paramètres</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [scrollY]="true">
+  <ion-list>
+    <ion-item>
+      <ion-text color="warning">Effect</ion-text>
+    </ion-item>
+    <ion-item>
+      <ion-label>Music</ion-label>
+      <app-setting-toggle [checked]="music" mode="android"
+                          size="small"
+                          (lyLaInputChange)="onSoundOption($event)"></app-setting-toggle>
+    </ion-item>
+    <ion-item>
+      <ion-label>Song pad</ion-label>
+      <app-setting-toggle [checked]="padSoundOptions" size="small" mode="android"
+                  (lyLaInputChange)="onSoundPad($event)"></app-setting-toggle>
+    </ion-item>
+    <ion-item-divider></ion-item-divider>
+    <ion-item>
+      <ion-text color="warning">Clavier</ion-text>
+    </ion-item>
+    <ion-item *ngFor="let keyboard of keyboardNames; let index = index;">
+      <ion-label>{{keyboard.val}}</ion-label>
+      <app-setting-toggle size="small" [(ngModel)]="keyboard.isChecked" [disabled]="keyboard.isChecked"
+                    (lyLaInputChange)="onChangeKeyBoard($event, index)"></app-setting-toggle>
+    </ion-item>
+    <ion-item-divider></ion-item-divider>
+    <ion-item>
+      <ion-text color="warning">Nombres Lettres</ion-text>
+    </ion-item>
+    <ion-item  *ngFor="let colsCheckboxe of colsCheckboxes; let index = index;">
+      <ion-label>{{colsCheckboxe.val}}</ion-label>
+      <app-setting-toggle size="small" [(ngModel)]="colsCheckboxe.isChecked" [disabled]="colsCheckboxe.isChecked"
+                    (lyLaInputChange)="onChangeCol($event, index)"></app-setting-toggle>
+    </ion-item>
+    <ion-item-divider></ion-item-divider>
+    <ion-item>
+      <ion-text color="warning">Nombre lignes</ion-text>
+    </ion-item>
+    <ion-item  *ngFor="let rowsCheckboxe of rowsCheckboxes; let index = index;">
+      <ion-label>{{rowsCheckboxe.val}}</ion-label>
+      <app-setting-toggle size="small" [(ngModel)]="rowsCheckboxe.isChecked" [disabled]="rowsCheckboxe.isChecked"
+                    (lyLaInputChange)="onChangeRow($event, index)"></app-setting-toggle>
+    </ion-item>
+
+  </ion-list>
+</ion-content>
+
+<ion-footer class="ion-text-center">
+    <ion-button (click)="onDismiss()" expand="block" color="light">
+      <ion-icon name="close" slot="icon-only"></ion-icon>
+    </ion-button>
+</ion-footer>

@@ -1,0 +1,7 @@
+{
+  "name": "PlayWithWords",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

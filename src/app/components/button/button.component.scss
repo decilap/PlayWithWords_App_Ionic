@@ -1,0 +1,39 @@
+.buttons{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 5px;
+  ion-button{
+      width: 35px;
+      background: linear-gradient(to bottom, rgb(50, 52, 48) 0%, rgb(158, 161, 156) 100%);
+      margin: 0 auto;
+      border-radius: 5px;
+      border: 1px solid #c4c4c4;
+      box-shadow: 0px 5px 0px 0px rgb(66, 68, 65),
+      0px 5px 12px 0px rgba(0, 0, 0, 0.6),
+      inset 0px 0px 10px -5px rgba(0, 0, 0, 1);
+      transition: all 100ms linear;
+      touch-callout: none;
+      user-select: none;
+      cursor: pointer;
+      display: block;
+      position: relative;
+      font-family: Arial Black, Gadget, sans-serif;
+      font-size: 15px;
+      color: #fff;
+      text-align: center;
+      text-transform: uppercase;
+      flex: 1;
+    > span {
+      display: block;
+      -webkit-transform: skew(5deg, 0deg);
+    }
+
+    :active {
+      top: 4px;
+      box-shadow: 0px 3px 0px 0px rgba(88, 163, 31, 1),
+      0px 5px 5px 0px rgba(0, 0, 0, 0.6),
+      inset 0px 0px 10px -5px rgba(0, 0, 0, 1);
+    }
+  }
+}
+

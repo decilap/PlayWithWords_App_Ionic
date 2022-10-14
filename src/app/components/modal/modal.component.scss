@@ -1,0 +1,118 @@
+.ion-text-center{
+  .button-custom {
+    text-align: center;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-size: 20px;
+    letter-spacing: 4px;
+    position: relative;
+    background-color: #3880ff;
+    border: none;
+    color: #fff;
+    //padding: 20px;
+    width: 200px;
+    text-align: center;
+    transition-duration: 0.4s;
+    overflow: hidden;
+    box-shadow: 0 5px 15px #193047;
+    border-radius: 4px;
+  }
+
+
+  .button-custom:after {
+    content: "";
+    background: #1abc9c;
+    display: block;
+    position: absolute;
+    padding-top: 300%;
+    padding-left: 350%;
+    margin-left: -20px !important;
+    margin-top: -120%;
+    opacity: 0;
+    transition: all 0.8s
+  }
+
+  .button-custom:active:after {
+    padding: 0;
+    margin: 0;
+    opacity: 1;
+    transition: 0s
+  }
+}
+
+.message_shadows{
+    text-shadow: 6px 6px 0 #54c5ce,
+    9px 9px #48bcc5, 12px 12px 0 #2d9ba4;
+    font-family: bungee, sans-serif;
+    text-transform: uppercase;
+    font-size: calc(2rem + 5vw);
+    text-align: center;
+    margin: 0;
+    color: #8decf1;
+    animation: shadows 1.2s ease-in infinite, move 1.2s ease-in infinite;
+    letter-spacing: 0.4rem;
+  }
+
+  @keyframes shadows {
+    0% {
+      text-shadow: none;
+    }
+    10% {
+      text-shadow: 3px 3px 0 #69d0d7;
+    }
+    20% {
+      text-shadow: 3px 3px 0 #69d0d7,
+      6px 6px 0 #54c5ce;
+    }
+    30% {
+      text-shadow: 3px 3px 0 #69d0d7,
+      6px 6px 0 #54c5ce, 9px 9px #48bcc5;
+    }
+    40% {
+      text-shadow: 3px 3px 0 #69d0d7,
+      6px 6px 0 #54c5ce, 9px 9px #48bcc5,
+      12px 12px 0 #2d9ba4;
+    }
+    50% {
+      text-shadow: 3px 3px 0 #69d0d7,
+      6px 6px 0 #54c5ce, 9px 9px #48bcc5,
+      12px 12px 0 #2d9ba4;
+    }
+    60% {
+      text-shadow: 3px 3px 0 #69d0d7,
+      6px 6px 0 #54c5ce, 9px 9px #48bcc5,
+      12px 12px 0 #2d9ba4;
+    }
+    70% {
+      text-shadow: 3px 3px 0 #69d0d7,
+      6px 6px 0 #54c5ce, 9px 9px #48bcc5;
+    }
+    80% {
+      text-shadow: 3px 3px 0 #69d0d7,
+      6px 6px 0 #54c5ce;
+    }
+    90% {
+      text-shadow: 3px 3px 0 #69d0d7;
+    }
+    100% {
+      text-shadow: none;
+    }
+  }
+
+  @keyframes move {
+    0% {
+      transform: translate(0px, 0px);
+    }
+    40% {
+      transform: translate(-12px, -12px);
+    }
+    50% {
+      transform: translate(-12px, -12px);
+    }
+    60% {
+      transform: translate(-12px, -12px);
+    }
+    100% {
+      transform: translate(0px, 0px);
+    }
+  }

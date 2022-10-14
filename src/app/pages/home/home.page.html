@@ -1,0 +1,33 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar fixed>
+    <ion-title class="ion-padding-vertical">L Le Mot L</ion-title>
+    <ion-buttons slot="start">
+      <ion-button color="dark" (click)="onHelp()">
+        <!--<ion-icon name="help-circle-outline"></ion-icon>-->
+        <ion-icon color="success" name="information-circle-outline"></ion-icon>
+      </ion-button>
+      <ion-button class="btn-chart" (click)="onStat()">
+        <ion-icon name="stats-chart-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-button class="btn-seeting" (click)="onSetting()">
+        <ion-icon name="settings-outline"></ion-icon>
+      </ion-button>
+      <ion-button color="dark" (click)="onLogout()">
+        <ion-icon name="log-out-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYa7fAFi08nd_FRZMGPkw2tsN_8g5JQEMDeg&usqp=CAU"></ion-img>
+    <app-letters  (onOpenModal)="onFinishedGame($event)"></app-letters>
+    <app-buttons (onSubmit)="onSubmit($event)" (onDelete)="onDelete($event)"></app-buttons>
+</ion-content>
+
+<ion-footer class="ion-text-center">
+  <ion-toolbar>
+  </ion-toolbar>
+</ion-footer>

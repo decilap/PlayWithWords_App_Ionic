@@ -1,0 +1,38 @@
+.stats{
+  margin-top: 50px;
+  &_card{
+    background: #1d1d20;
+    height: 80px;
+    border-radius: 6px;
+    color: green;
+    font-weight: bold;
+    line-height: 80px;
+    display: flex;
+    padding:  0 20px;
+    font-size: 0.7em;
+    &_text{
+      font-size: 1em;
+      color: white;
+      padding-left: 10px;
+    }
+  }
+}
+
+
+.performances{
+
+  padding: 10px;
+
+  &_btn {
+    background: #1d1d20;
+    color: white;
+    padding: 5px 5px 5px 20px;
+    border-radius: 5px;
+  }
+}
+
+
+ion-toolbar {
+  --color: #ffffff;
+  --background:  rgb(54 73 62 / 99%);
+}

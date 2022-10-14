@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Fin de la partie</ion-title>
+    <!--<ion-buttons slot="end">
+      <ion-button (click)="dismiss()">Fermer</ion-button>
+    </ion-buttons>-->
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <h2 class="message_shadows">{{message}}</h2>
+  <ion-grid>
+    <ion-row>
+      <ion-col class="ion-text-center" >
+        <ion-button class="button-custom" (click)="onContinue()">Continuer</ion-button>
+      </ion-col>
+      <ion-col class="ion-text-center">
+        <ion-button class="button-custom" (click)="onExit()">Quitter</ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
+

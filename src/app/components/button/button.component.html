@@ -1,0 +1,3 @@
+<div class="buttons">
+  <ion-button [disabled]="finishedGame" color="dark" *ngFor="let alphabet of alphabets" (click)="onClick($event)">{{alphabet}}</ion-button>
+</div>

@@ -1,0 +1,11 @@
+<div class="keys" *ngIf="currentLayout >= 0">
+  <div class="top">
+    <app-button [finishedGame]="finishedGame" [alphabets]="layouts[this.currentLayout].layoutTop"></app-button>
+    <app-button [finishedGame]="finishedGame" [alphabets]="layouts[this.currentLayout].layoutCenter"></app-button>
+  </div>
+  <div class="bottom">
+    <ion-button class="enter" color="dark" [disabled]="finishedGame" (click)="enter($event)">Enter</ion-button>
+    <app-button [finishedGame]="finishedGame" class="midle-button" [alphabets]="layouts[this.currentLayout].layoutBottom"></app-button>
+    <ion-button class="delete" color="dark" [disabled]="finishedGame" (click)="delete($event)"><ion-icon name="backspace-outline"></ion-icon></ion-button>
+  </div>
+</div>
